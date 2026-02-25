@@ -6,6 +6,7 @@ def is_valid_email(email):
     return False
 def main():
     email = input("What's your email? ").strip()
+    name = input('what is your name...')
     if is_valid_email(email):
         print("Valid")
     else:
