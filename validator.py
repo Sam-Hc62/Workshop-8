@@ -9,6 +9,9 @@ def main():
     name = input('what is your name...')
     if is_valid_email(email):
         print("Valid")
+        with open("contacts.csv", "a") as file:
+            writer = csv.DictWriter(file, fieldnames=["name", "email"])
+            writer.writerow({"name": name, "email": email})
     else:
         print("Invalid")
 if __name__ == "__main__":
